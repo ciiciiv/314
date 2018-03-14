@@ -1,0 +1,37 @@
+
+
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
+public class DragEventSyn : MonoBehaviour, IEndDragHandler, IBeginDragHandler, IDragHandler
+{
+    public ScrollRect XScrollRect;
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if (XScrollRect)
+        {
+            XScrollRect.OnEndDrag(eventData);
+        }
+
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (XScrollRect)
+        {
+            XScrollRect.OnBeginDrag(eventData);
+        }
+
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (XScrollRect)
+        {
+            XScrollRect.OnDrag(eventData);
+        }
+
+    }
+}
